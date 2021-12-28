@@ -1,0 +1,23 @@
+<h1>You have {{ wcount }} Word </h1>
+
+
+
+<nav>
+    <a href="{% url 'home' %}">Start Again</a> </tab>
+
+    <a href="{% url 'about' %}">About</a>
+</nav>
+
+<h1>Your Text :</h1>
+
+{{ fulltext }}
+
+<h1>Word count: </h1>
+
+<h2>
+{% for word, totalword in sortword %}
+
+{{ word }} - {{ totalword }} <br>
+ 
+
+{% endfor %} </h2>
